@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Ashwathi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #130d24;
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 25px;
+    background:
+    radial-gradient(circle at top, #a34c87, transparent 55%),
+    linear-gradient(145deg, #170e2d, #481c46, #100d25);
+}
+
+.content {
+    max-width: 800px;
+    animation: appear 2s ease;
+    z-index: 2;
+}
+
+.small-title {
+    color: #ffe0f0;
+    letter-spacing: 4px;
+    font-size: 13px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(65px, 13vw, 120px);
+    color: #ffd3ed;
+    margin: 25px 0;
+    text-shadow: 0 0 30px #ff70bc;
+}
+
+h2 {
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.hero p {
+    color: #ead8ed;
+    margin-top: 20px;
+}
+
+.line {
+    width: 100px;
+    height: 2px;
+    background: #ffd58e;
+    margin: 20px auto;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    border-radius: 40px;
+    background: linear-gradient(135deg, #ffe5ae, #ffb9dc);
+    color: #32152f;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #ffc4e3;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #cbbbd8;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.time-box {
+    width: 105px;
+    padding: 22px 10px;
+    border: 1px solid #e5a9d4;
+    border-radius: 18px;
+    background: #ffffff10;
+}
+
+.time-box h2 {
+    color: #ffd2e9;
+    font-size: 32px;
+}
+
+.time-box span {
+    font-size: 11px;
+    color: #d7c6df;
+}
+
+.wishes {
+    background: linear-gradient(180deg, #130d24, #28152f);
+}
+
+.wish-card {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 40px 25px;
+    border: 1px solid #edb6d9;
+    border-radius: 25px;
+    background: #ffffff0b;
+    line-height: 2;
+    color: #e9dbea;
+}
+
+.details {
+    background: #1c112b;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.detail-box {
+    padding: 30px;
+    background: #ffffff0b;
+    border: 1px solid #edb6d944;
+    border-radius: 20px;
+}
+
+.emoji {
+    font-size: 35px;
+}
+
+.detail-box h3 {
+    color: #ffd0e8;
+    margin: 15px 0;
+}
+
+.detail-box p {
+    color: #cbbbd8;
+    font-size: 13px;
+}
+
+.gallery {
+    background: linear-gradient(180deg, #1c112b, #130d24);
+}
+
+.gallery-grid {
+    max-width: 900px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo {
+    height: 250px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #6b3766, #b17bb5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    border: 2px solid #f5b8dc;
+}
+
+.footer {
+    padding: 60px 20px;
+    text-align: center;
+    background: #100a1e;
+}
+
+.footer h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    color: #ffc5e5;
+}
+
+.footer p {
+    color: #bcaecb;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.floating {
+    position: fixed;
+    bottom: -40px;
+    font-size: 22px;
+    pointer-events: none;
+    z-index: 5;
+    animation: floatUp 8s linear forwards;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width:600px) {
+    .section {
+        padding: 65px 15px;
+    }
+
+    .time-box {
+        width: 75px;
+        padding: 15px 5px;
+    }
+
+    .time-box h2 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="content">
+
+        <div class="small-title">
+            ✨ A SPECIAL DAY FOR ASHWATHI ✨
+        </div>
+
+        <h1>Ashwathi</h1>
+
+        <div class="line"></div>
+
+        <h2>HAPPY BIRTHDAY 🎂</h2>
+
+        <p>
+            A beautiful day, a beautiful soul,
+            and a celebration full of love.
+        </p>
+
+        <a href="#celebration" class="btn">
+            Discover Your Surprise ♡
+        </a>
+
+    </div>
+</section>
+
+<section class="section" id="celebration">
+
+    <div class="section-title">The Big Day</div>
+
+    <p class="subtitle">
+        COUNTING DOWN TO ASHWATHI'S BIRTHDAY
+    </p>
+
+    <div class="countdown" id="countdown">
+
+        <div class="time-box">
+            <h2 id="days">00</h2>
+            <span>DAYS</span>
+        </div>
+
+        <div class="time-box">
+            <h2 id="hours">00</h2>
+            <span>HOURS</span>
+        </div>
+
+        <div class="time-box">
+            <h2 id="minutes">00</h2>
+            <span>MINUTES</span>
+        </div>
+
+        <div class="time-box">
+            <h2 id="seconds">00</h2>
+            <span>SECONDS</span>
+        </div>
+
+    </div>
+
+    <p style="margin-top:25px;color:#ffd0e8">
+        🎀 24 February 🎀
+    </p>
+
+</section>
+
+<section class="section wishes">
+
+    <div class="section-title">
+        A Little Wish For You
+    </div>
+
+    <p class="subtitle">
+        BECAUSE YOU DESERVE ALL THE HAPPINESS
+    </p>
+
+    <div class="wish-card">
+
+        <div style="font-size:40px">💗</div>
+
+        Dear Ashwathi,
+
+        May your birthday be filled with endless
+        happiness, magical moments, beautiful memories,
+        and dreams that come true.
+
+        May your smile always shine brighter than
+        the stars.
+
+        May every new chapter of your life bring
+        you success, love and countless reasons
+        to smile.
+
+        <br><br>
+
+        <strong style="color:#ffc5e5">
+            You are truly special. Happy Birthday! 🎂
+        </strong>
+
+    </div>
+
+</section>
+
+<section class="section details">
+
+    <div class="section-title">Birthday Details</div>
+
+    <p class="subtitle">A SPECIAL DAY TO REMEMBER</p>
+
+    <div class="detail-grid">
+
+        <div class="detail-box">
+            <div class="emoji">📅</div>
+            <h3>Date</h3>
+            <p>24 February</p>
+        </div>
+
+        <div class="detail-box">
+            <div class="emoji">🎂</div>
+            <h3>Birthday Girl</h3>
+            <p>Ashwathi</p>
+        </div>
+
+        <div class="detail-box">
+            <div class="emoji">🎀</div>
+            <h3>Special Day</h3>
+            <p>Full of Love & Happiness</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section gallery">
+
+    <div class="section-title">
+        Beautiful Memories
+    </div>
+
+    <p class="subtitle">
+        A LITTLE COLLECTION OF HAPPINESS
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="photo">🌸</div>
+        <div class="photo">🎀</div>
+        <div class="photo">🦋</div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <h2>Let's Celebrate!</h2>
+
+    <p>Made with 💗 for our special birthday girl Ashwathi.</p>
+
+    <p>© 2027 Birthday Celebration</p>
+
+</footer>
+
+<script>
+
+// Ashwathi's next birthday
+function getNextBirthday() {
+    const now = new Date();
+
+    let birthday = new Date(
+        now.getFullYear(), 1, 24, 0, 0, 0
+    );
+
+    if (birthday <= now) {
+        birthday.setFullYear(now.getFullYear() + 1);
+    }
+
+    return birthday;
+}
+
+const birthdayDate = getNextBirthday();
+
+function updateCountdown() {
+
+    const now = new Date();
+    const difference = birthdayDate - now;
+
+    if (difference <= 0) {
+        document.getElementById("countdown").innerHTML =
+        "<h2 style='color:#ffd2e9'>🎉 Happy Birthday Ashwathi! 🎂</h2>";
+        return;
+    }
+
+    const days = Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// Floating hearts and sparkles
+
+const symbols = ["💗", "✨", "🎀", "💕", "🌸", "🦋"];
+
+function createFloating() {
+
+    const element = document.createElement("div");
+
+    element.className = "floating";
+
+    element.innerText =
+    symbols[Math.floor(Math.random() * symbols.length)];
+
+    element.style.left = Math.random() * 100 + "vw";
+
+    element.style.animationDuration =
+    (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(element);
+
+    setTimeout(() => {
+        element.remove();
+    }, 10000);
+}
+
+setInterval(createFloating, 700);
+
+</script>
+
+</body>
+</html>
